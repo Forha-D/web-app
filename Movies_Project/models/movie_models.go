@@ -6,3 +6,9 @@ type Movie struct {
 	Genre  string `json:"genre"`
 	Rating int    `json:"rating"`
 }
+
+type User struct {
+	Name        string `json:"name,omitempty"  validate:"required"`
+	Email       string `json:"email,omitempty"  validate:"required,email"`
+	MovieDetail *Movie
+}

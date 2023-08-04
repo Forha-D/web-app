@@ -9,8 +9,13 @@ import (
 
 var moviesDB = map[int]models.Movie{}
 
-// Counter for generating movie IDs
+// Counter for generating movie
 var movieIDCounter = 1
+
+//func IsValidEmail(e string) bool {
+//	var email = regexp.MustCompile(`^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$`)
+//	return email.MatchString(e)
+//}
 
 func GetMovies(c echo.Context) error {
 	var movies []models.Movie
